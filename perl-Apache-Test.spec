@@ -1,12 +1,13 @@
 %define snap r373875
 
 %define _requires_exceptions perl(Apache2::Const)\\|perl(ModPerl::Config)
+%define _provides_exceptions perl(HTTP::Request::Common)
 %define module	Apache-Test
 
 Summary:	Test.pm wrapper with helpers for testing Apache
 Name: 		perl-%{module}
 Version: 	1.29
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPL or Artistic
 Group: 		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}

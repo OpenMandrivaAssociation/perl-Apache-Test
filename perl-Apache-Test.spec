@@ -13,7 +13,6 @@ Source:     http://www.cpan.org/modules/by-module/Apache/%{module}-%{version}.ta
 Provides:	perl(Apache::TestConfigParse)
 Provides:	perl(Apache::TestConfigPerl)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Apache::Test is a test toolkit for testing an Apache server with

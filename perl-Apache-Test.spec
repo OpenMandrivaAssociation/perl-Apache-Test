@@ -5,23 +5,24 @@
 Summary:	Test.pm wrapper with helpers for testing Apache
 Name: 		perl-%{module}
 Version: 	1.30
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPL or Artistic
 Group: 		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/Apache/%{module}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Apache/%{module}-%{version}.tar.gz
 Provides:	perl(Apache::TestConfigParse)
 Provides:	perl(Apache::TestConfigPerl)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
-Apache::Test is a test toolkit for testing an Apache server with
-any configuration. It works with Apache 1.3 and Apache 2.0 and any
-of its modules, including mod_perl 1.0 and 2.0. It was originally
-developed for testing mod_perl 2.0.
+Apache::Test is a test toolkit for testing an Apache server with any
+configuration. It works with Apache 1.3 and Apache 2.0 and any of its modules,
+including mod_perl 1.0 and 2.0. It was originally developed for testing
+mod_perl 2.0.
 
 %prep
+
 %setup -q -n %{module}-%{version} 
 
 %build
@@ -41,5 +42,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/Apache
 %{perl_vendorlib}/Bundle
 %{_mandir}/*/*
-
-

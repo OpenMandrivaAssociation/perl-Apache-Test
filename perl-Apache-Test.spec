@@ -4,12 +4,12 @@
 
 Summary:	Test.pm wrapper with helpers for testing Apache
 Name: 		perl-%{module}
-Version: 	1.30
-Release:	%mkrel 2
+Version: 	1.31
+Release:	%mkrel 0.653194.1
 License:	GPL or Artistic
 Group: 		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}
-Source0:	http://www.cpan.org/modules/by-module/Apache/%{module}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Apache/%{module}.tar.gz
 Provides:	perl(Apache::TestConfigParse)
 Provides:	perl(Apache::TestConfigPerl)
 BuildArch:	noarch
@@ -23,7 +23,7 @@ mod_perl 2.0.
 
 %prep
 
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{module}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -31,6 +31,7 @@ mod_perl 2.0.
 
 %install
 rm -rf %{buildroot}
+
 %makeinstall_std
 
 %clean 
@@ -41,4 +42,5 @@ rm -rf %{buildroot}
 %doc CONTRIBUTORS Changes INSTALL LICENSE README SUPPORT ToDo
 %{perl_vendorlib}/Apache
 %{perl_vendorlib}/Bundle
+%{perl_vendorlib}/MyTest/Util.pm
 %{_mandir}/*/*

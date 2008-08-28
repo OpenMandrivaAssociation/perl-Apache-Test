@@ -5,7 +5,7 @@
 Summary:	Test.pm wrapper with helpers for testing Apache
 Name: 		perl-%{module}
 Version: 	1.31
-Release:	%mkrel 2.664495.1
+Release:	%mkrel 2.689836.1
 License:	GPL or Artistic
 Group: 		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}

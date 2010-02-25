@@ -44,5 +44,4 @@ rm -rf %{buildroot}
 %doc CONTRIBUTORS Changes INSTALL LICENSE README SUPPORT ToDo
 %{perl_vendorlib}/Apache
 %{perl_vendorlib}/Bundle
-%{perl_vendorlib}/MyTest/Util.pm
 %{_mandir}/*/*

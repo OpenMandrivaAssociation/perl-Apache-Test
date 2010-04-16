@@ -1,12 +1,12 @@
 %define upstream_name    Apache-Test
-%define upstream_version 1.31
+%define upstream_version 1.32
 
 %define _requires_exceptions perl(Apache2::Const)\\|perl(ModPerl::Config)
 %define _provides_exceptions perl(HTTP::Request::Common)
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:    %mkrel 1
 
 Summary:	Test.pm wrapper with helpers for testing Apache
 License:	GPL+ or Artistic

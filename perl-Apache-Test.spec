@@ -1,18 +1,18 @@
 %define upstream_name    Apache-Test
-%define upstream_version 1.33
+%define upstream_version 1.34
 
 %define _requires_exceptions perl(Apache2::Const)\\|perl(ModPerl::Config)
 %define _provides_exceptions perl(HTTP::Request::Common)
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 0.0.rc1.1
 
 Summary:	Test.pm wrapper with helpers for testing Apache
 License:	GPL+ or Artistic
 Group: 		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Apache/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Apache/%{upstream_name}-%{upstream_version}-rc1.tar.gz
 
 BuildArch:	noarch
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
@@ -26,7 +26,7 @@ including mod_perl 1.0 and 2.0. It was originally developed for testing
 mod_perl 2.0.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{upstream_version}-rc1
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor

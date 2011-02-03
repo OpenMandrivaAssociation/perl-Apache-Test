@@ -1,5 +1,5 @@
 %define upstream_name    Apache-Test
-%define upstream_version 1.35
+%define upstream_version 1.36
 
 %define _requires_exceptions perl(Apache2::Const)\\|perl(ModPerl::Config)
 %define _provides_exceptions perl(HTTP::Request::Common)

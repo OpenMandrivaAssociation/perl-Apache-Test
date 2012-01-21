@@ -6,7 +6,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:    %mkrel 4
 
 Summary:	Test.pm wrapper with helpers for testing Apache
 License:	GPL+ or Artistic

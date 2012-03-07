@@ -1,21 +1,18 @@
-%define upstream_name    Apache-Test
-%define upstream_version 1.36
+%define upstream_name Apache-Test
+%define upstream_version 1.37
 
 %define _requires_exceptions perl(Apache2::Const)\\|perl(ModPerl::Config)
 %define _provides_exceptions perl(HTTP::Request::Common)
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 5
-
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	1
 Summary:	Test.pm wrapper with helpers for testing Apache
 License:	GPL+ or Artistic
-Group: 		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Group:		Development/Perl
+URL:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Apache/%{upstream_name}-%{upstream_version}.tar.gz
-
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 Provides:	perl(Apache::TestConfigParse)
 Provides:	perl(Apache::TestConfigPerl)
 
@@ -33,14 +30,10 @@ mod_perl 2.0.
 %make
 
 %install
-rm -rf %{buildroot}
+
 %makeinstall_std
 
-%clean 
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc CONTRIBUTORS Changes INSTALL LICENSE README SUPPORT ToDo
 %{perl_vendorlib}/Apache
 %{perl_vendorlib}/Bundle

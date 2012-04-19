@@ -12,6 +12,7 @@ Source0:	http://www.cpan.org/modules/by-module/Apache/%{upstream_name}-%{upstrea
 BuildArch:	noarch
 Provides:	perl(Apache::TestConfigParse)
 Provides:	perl(Apache::TestConfigPerl)
+BuildRequires:	perl-devel
 
 %description
 Apache::Test is a test toolkit for testing an Apache server with any

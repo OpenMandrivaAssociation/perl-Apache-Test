@@ -1,14 +1,14 @@
 %define upstream_name Apache-Test
-%define upstream_version 1.37
+%define upstream_version 1.38
 
 Summary:	Test.pm wrapper with helpers for testing Apache
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	6
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Apache/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Apache/Apache-Test-%{upstream_version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 Provides:	perl(Apache::TestConfigParse)
@@ -36,4 +36,5 @@ mod_perl 2.0.
 %{perl_vendorlib}/Apache
 %{perl_vendorlib}/Bundle
 %{_mandir}/man3/*
+
 

@@ -1,14 +1,13 @@
 %define upstream_name Apache-Test
-%define upstream_version 1.38
 
 Summary:	Test.pm wrapper with helpers for testing Apache
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	9
+Version:	1.43
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Apache/Apache-Test-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/pod/Apache::Test
+Source0:	https://www.cpan.org/modules/by-module/Apache/Apache-Test-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test)
 BuildRequires:	perl-devel
@@ -22,20 +21,17 @@ including mod_perl 1.0 and 2.0. It was originally developed for testing
 mod_perl 2.0.
 
 %prep
-%setup -qn %{upstream_name}-%{upstream_version}
+%autosetup -p1 -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %install
-
-%makeinstall_std
+%make_install
 
 %files
 %doc CONTRIBUTORS Changes INSTALL LICENSE README SUPPORT ToDo
 %{perl_vendorlib}/Apache
 %{perl_vendorlib}/Bundle
 %{_mandir}/man3/*
-
-

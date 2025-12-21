@@ -9,6 +9,7 @@ Group:		Development/Perl
 Url:		https://metacpan.org/pod/Apache::Test
 Source0:	https://www.cpan.org/modules/by-module/Apache/Apache-Test-%{version}.tar.gz
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl(Test)
 BuildRequires:	perl-devel
 Provides:	perl(Apache::TestConfigParse)
